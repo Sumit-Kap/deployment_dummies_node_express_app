@@ -29,7 +29,7 @@ app.use(function (error, req, res, next) {
   console.log("printing", error);
   res.status(500).json({ message: "something went wrong" });
 });
-
-app.listen(4000, () => {
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
   console.log("listening on port 4000");
 });
